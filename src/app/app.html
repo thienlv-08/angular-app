@@ -1,0 +1,14 @@
+<main class="main-container">
+  <h1>Web JS + Kotlin WebView Bridge</h1>
+  
+  <div class="card">
+    <h2>Messages received from Native</h2>
+    <pre class="message-box">{{ messageFromNative() }}</pre>
+  </div>
+
+  <div class="actions">
+    <button (click)="sendHelloToNative()">Send Greeting to Native</button>
+    <button (click)="requestDataFromNative()">Request Data from Native</button>
+  </div>
+</main>
+<router-outlet></router-outlet>
