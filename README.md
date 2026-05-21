@@ -1,59 +1,119 @@
-# NativeWeb
+# 💰 Cash Flow Management
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.8.
+Ứng dụng **Quản lý Dòng tiền** dành cho doanh nghiệp, xây dựng trên nền tảng **Angular 21** với giao diện hiện đại sử dụng **Angular Material**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📋 Giới thiệu
 
-```bash
-ng serve
+Cash Flow Management là một Single Page Application (SPA) giúp doanh nghiệp theo dõi, phân tích và lập kế hoạch tài chính toàn diện. Ứng dụng bao gồm các chức năng quản lý giao dịch, công nợ, dự báo, ngân sách và báo cáo tài chính.
+
+---
+
+## 🗂️ Tính năng chính
+
+| Nhóm chức năng | Màn hình | Mô tả |
+|---|---|---|
+| **Tổng quan** | Dashboard | Tổng quan tình hình tài chính |
+| **Dòng tiền** | Giao dịch | Quản lý các giao dịch thu/chi |
+| **Dòng tiền** | Tài khoản tiền | Quản lý tài khoản ngân hàng/tiền mặt |
+| **Công nợ** | Phải thu | Theo dõi các khoản phải thu từ khách hàng |
+| **Công nợ** | Phải trả | Theo dõi các khoản phải trả cho nhà cung cấp |
+| **Kế hoạch** | Dự báo | Dự báo dòng tiền tương lai |
+| **Kế hoạch** | Ngân sách | Lập và theo dõi ngân sách |
+| **Vận hành** | Phê duyệt | Quy trình phê duyệt giao dịch |
+| **Vận hành** | Báo cáo | Báo cáo tài chính tổng hợp |
+| **Hệ thống** | Cài đặt | Cấu hình hệ thống |
+
+---
+
+## 🏗️ Kiến trúc & Công nghệ
+
+- **Framework**: Angular 21 (Standalone Components, Signal-based)
+- **UI Library**: Angular Material 21
+- **Routing**: Lazy-loading theo từng feature module
+- **State Management**: Angular Signals
+- **Testing**: Vitest
+- **Styling**: SCSS
+
+### Cấu trúc thư mục
+
+```
+src/
+├── app/
+│   ├── features/          # Các module tính năng (lazy-loaded)
+│   │   ├── dashboard/     # Tổng quan
+│   │   ├── cash/          # Dòng tiền (giao dịch, tài khoản)
+│   │   ├── receivables/   # Phải thu
+│   │   ├── payables/      # Phải trả
+│   │   ├── forecast/      # Dự báo
+│   │   ├── budget/        # Ngân sách
+│   │   ├── approvals/     # Phê duyệt
+│   │   ├── reports/       # Báo cáo
+│   │   └── settings/      # Cài đặt
+│   ├── layout/            # App Shell (sidebar, toolbar)
+│   └── shared/            # Các component dùng chung
+└── styles.scss            # Global styles
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Hướng dẫn khởi động
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Yêu cầu hệ thống
+
+- Node.js >= 18
+- npm >= 10
+
+### Cài đặt dependencies
 
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Chạy môi trường development
 
 ```bash
+npm start
+```
+
+Ứng dụng sẽ chạy tại `http://localhost:4200/`
+
+### Build production
+
+```bash
+npm run build
+```
+
+Kết quả build sẽ được lưu trong thư mục `dist/`.
+
+---
+
+## 🧪 Kiểm thử
+
+### Chạy unit tests
+
+```bash
+npm test
+```
+
+---
+
+## 🛠️ Generate code với Angular CLI
+
+```bash
+# Tạo component mới
+ng generate component features/ten-component
+
+# Xem tất cả schematic có sẵn
 ng generate --help
 ```
 
-## Building
+---
 
-To build the project run:
+## 📚 Tài nguyên tham khảo
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular Documentation](https://angular.dev)
+- [Angular Material](https://material.angular.io)
+- [Angular CLI Reference](https://angular.dev/tools/cli)
+- [Vitest](https://vitest.dev/)
