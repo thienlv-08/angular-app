@@ -1,0 +1,18 @@
+# Angular & SCSS Coding Standards (2026)
+
+## Language & Technology Constraints
+- Always write component styles using SCSS. Never use vanilla CSS.
+- Component architecture MUST use Angular Standalone Components.
+
+## SCSS Architectural Rules
+- ALWAYS wrap the entire style sheet inside the `:host` selector to enforce strict View Encapsulation. Use `:host-context` only when styling depends on external classes.
+- Use advanced SCSS nesting (maximum 3 levels deep to avoid over-specificity).
+- Leverage modern Sass module syntax: ALWAYS use `@use` for imports, NEVER use the deprecated `@import`.
+- Extract repetitive layout patterns (e.g., flex center, anti-gravity animations) into SCSS mixins.
+- Maintain a local color/spacing variable palette using SCSS variables at the top of the file, or reference Global Material Design tokens via `@use '@angular/material' as mat;`.
+
+## Component Integration & Safety
+- NEVER use `::ng-deep` globally. If overriding Angular Material styles is mandatory, it MUST be strictly nested inside `:host ::ng-deep` to prevent style bleeding.
+- Ensure the component's `.ts` file correctly links to the stylesheet via `styleUrl: './component.scss'` (singular string, not arrays, matching Angular modern standards).
+- Optimize SCSS output by utilizing the parent selector reference `&` for pseudo-classes (`&:hover`, `&:focus`) and BEM modifiers if applicable.
+

@@ -7,6 +7,12 @@
       "skillPath": "skills/angular-component/SKILL.md",
       "computedHash": "2789fdf11e2a70832ce2e6e79954018325a010ebdd45c5d4b1e7bfdf44679b7c"
     },
+    "angular-material": {
+      "source": "pluginagentmarketplace/custom-plugin-angular",
+      "sourceType": "github",
+      "skillPath": "skills/angular-material/SKILL.md",
+      "computedHash": "819b6e2f51a7778777f40c9f12653dbdc46189a917feac73455ec69fb5c83822"
+    },
     "angular-signals": {
       "source": "analogjs/angular-skills",
       "sourceType": "github",
